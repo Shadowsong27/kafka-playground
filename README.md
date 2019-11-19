@@ -24,3 +24,16 @@ Make sure Zookeeper and Kafka is running
 
 # Command
 
+Run the following command in two separate processes (terminals)
+
+```
+python manage.py start-consume-streaming-data
+```
+
+This will start to produce message into the Kafka
+
+```
+python manage.py start-consume-streaming-data
+```
+
+This will simply print out the message sent previously.
