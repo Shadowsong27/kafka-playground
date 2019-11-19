@@ -22,6 +22,14 @@ https://kafka.apache.org/quickstart
 
 Make sure Zookeeper and Kafka is running
 
+For convenience, you can open a terminal to show all the messages
+
+cd to the directory of kafka folder
+
+```
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+```
+
 # Command
 
 Run the following command in two separate processes (terminals)
