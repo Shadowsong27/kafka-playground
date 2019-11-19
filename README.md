@@ -14,17 +14,31 @@ Install pykafka
 pip install pykafka
 ```
 
-Start Kafka Cluster on local machine, follow instruction here:
+Start Kafka Cluster on local machine, follow instructions here:
 
 ```
 https://kafka.apache.org/quickstart
 ```
 
-Make sure Zookeeper and Kafka is running
-
-For convenience, you can open a terminal to show all the messages
+On a simpler note:
 
 cd to the directory of kafka folder
+
+```
+cd ~/path/to/your/download/directory/kafka_2.12-2.3.0/
+```
+
+Make sure Zookeeper and Kafka is running by 
+
+```
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+```
+
+```
+bin/zookeeper-server-start.sh config/zookeeper.properties
+```
+
+For convenience, you can open a terminal to show all the messages
 
 ```
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
@@ -32,7 +46,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --f
 
 # Command
 
-Run the following command in two separate processes (terminals)
+Run the following python commands in two separate processes (terminals)
 
 ```
 python manage.py start-consume-streaming-data
